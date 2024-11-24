@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm preinst setup unpack
+DEPEND=virtual/linux-sources kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources virtual/libelf )
+DESCRIPTION=Realtek 8192EU driver module for Linux kernel
+EAPI=7
+HOMEPAGE=https://github.com/Mange/rtl8192eu-linux-driver
+IUSE=kernel_linux kernel_linux
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=kernel_linux? ( virtual/modutils )
+SLOT=0
+SRC_URI=https://github.com/Mange/rtl8192eu-linux-driver/archive/a5ac6789a78a4f5ca0bf157a0f62385ea034cb9c.tar.gz -> rtl8192eu-20240518.tar.gz
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	linux-mod	6c7b3e7b9d39bd049bf23a991c16315e	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=f744d0297192651ebb2fe27a667ad590

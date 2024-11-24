@@ -1,0 +1,10 @@
+libplist:
+  generator: github-1
+  packages:
+    - libplist:
+        version: 2.4.0
+        github:
+          user: libimobiledevice
+          repo: libplist
+          query: releases
+          tarball: libplist-{version}.tar.bz2

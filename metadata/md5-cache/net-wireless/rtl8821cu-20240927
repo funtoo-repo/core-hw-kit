@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup
+DEPEND=virtual/linux-sources kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources virtual/libelf )
+DESCRIPTION=Linux Driver for USB WiFi Adapters that are based on the RTL8811CU, RTL8821CU, RTL8821CUH and RTL8731AU Chipsets
+EAPI=7
+HOMEPAGE=https://github.com/morrownr/8821cu-20210916
+IUSE=kernel_linux kernel_linux
+KEYWORDS=*
+LICENSE=GPL-2
+RDEPEND=kernel_linux? ( virtual/modutils )
+SLOT=0
+SRC_URI=https://github.com/morrownr/8821cu-20210916/archive/2dce552dc6aa0cdab427bfa810c3df002eab0078.tar.gz -> rtl8821cu-20240927-2dce552dc6aa0cdab427bfa810c3df002eab0078.tar.gz
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	linux-mod	6c7b3e7b9d39bd049bf23a991c16315e	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=0224443dbb4af87225a029dbf45a6b46

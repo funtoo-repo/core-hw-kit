@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=configure install prepare
+DEPEND=nls? ( virtual/libintl ) lm_sensors? ( sys-apps/lm_sensors:= ) nls? ( sys-devel/gettext )
+DESCRIPTION=System performance tools for Linux
+EAPI=7
+HOMEPAGE=http://pagesperso-orange.fr/sebastien.godard/
+IUSE=debug nls lm_sensors selinux static
+KEYWORDS=*
+LICENSE=GPL-2
+RDEPEND=nls? ( virtual/libintl ) lm_sensors? ( sys-apps/lm_sensors:= ) selinux? ( sec-policy/selinux-sysstat )
+SLOT=0
+SRC_URI=https://github.com/sysstat/sysstat/tarball/3e3ec9b2c69940503723e3c2ffc1965a8a3484e3 -> sysstat-12.7.6-3e3ec9b.tar.gz
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	multilib	d410501a125f99ffb560b0c523cd3d1e	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=71322dae171f78f27223b210c45b788b

@@ -1,0 +1,10 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=Open Source implementation of a 16-bit x86 BIOS
+EAPI=7
+HOMEPAGE=https://www.seabios.org/
+KEYWORDS=*
+LICENSE=LGPL-3 GPL-3
+RDEPEND=!sys-firmware/seabios
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~ajak/distfiles/seabios-1.16.0-1.xpak
+_md5_=3e1903f3509ee6517f5f18eba95f59ea

@@ -1,0 +1,6 @@
+=sys-block/fio-2.15 python_single_target_python2_7 python_targets_python2_7
+=sys-block/fio-2.16 python_single_target_python2_7 python_targets_python2_7
+=sys-block/fio-3.2 python_single_target_python2_7 python_targets_python2_7
+app-mobilephone/wammu python_single_target_python2_7 python_targets_python2_7
+sys-apps/biosdisk python_single_target_python2_7 python_targets_python2_7
+sys-firmware/nvidia-firmware python_single_target_python2_7 python_targets_python2_7

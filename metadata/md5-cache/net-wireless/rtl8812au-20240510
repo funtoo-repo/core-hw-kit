@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm preinst setup unpack
+DEPEND=virtual/linux-sources kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources virtual/libelf )
+DESCRIPTION=Realtek 8812AU driver module for the Linux Kernel and Android
+EAPI=7
+HOMEPAGE=https://github.com/aircrack-ng/rtl8812au
+IUSE=kernel_linux kernel_linux
+KEYWORDS=-* amd64 x86 arm64 arm
+LICENSE=GPL-2
+RDEPEND=kernel_linux? ( virtual/modutils )
+SLOT=0
+SRC_URI=https://github.com/aircrack-ng/rtl8812au/archive/b44d288f423ede0fc7cdbf92d07a7772cd727de4.tar.gz -> rtl8812au-20240510.tar.gz
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	linux-mod	6c7b3e7b9d39bd049bf23a991c16315e	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=ff11dc8ccd95c3b506b529eb7edcd5c2

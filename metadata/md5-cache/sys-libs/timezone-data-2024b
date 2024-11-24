@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile config configure install postinst preinst prepare test
+DEPEND=nls? ( virtual/libintl )
+DESCRIPTION=Timezone data (/usr/share/zoneinfo) and utilities (tzselect/zic/zdump)
+EAPI=7
+HOMEPAGE=https://www.iana.org/time-zones
+IUSE=nls leaps-timezone elibc_FreeBSD
+KEYWORDS=*
+LICENSE=BSD public-domain
+RDEPEND=nls? ( virtual/libintl ) !sys-libs/glibc[vanilla(+)]
+SLOT=0
+SRC_URI=https://www.iana.org/time-zones/repository/releases/tzdata2024b.tar.gz https://www.iana.org/time-zones/repository/releases/tzcode2024b.tar.gz
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	d0939f99dd528dd0c5ec25284877bf5c	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=53075a523f48b71e058262a49352c7a1

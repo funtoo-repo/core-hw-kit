@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install setup unpack
+DEPEND=app-arch/unzip
+DESCRIPTION=Broadcom's NetXtremeII (bnx2 and bnx2x) Gigabit and 10GBe drivers
+EAPI=4
+HOMEPAGE=http://www.broadcom.com/support/ethernet_nic/netxtremeii.php
+IUSE=kernel_linux
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=app-arch/unzip
+SLOT=0
+SRC_URI=mirror://funtoo/broadcom-linux-6.2.23.zip
+_eclasses_=eapi7-ver	756b3f27d8e46131d5cf3c51bd876446	linux-info	c90a203b1c14cfa77bd3e37a0e96c955	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=3103bf45c53e808306a51004ac609bb0
