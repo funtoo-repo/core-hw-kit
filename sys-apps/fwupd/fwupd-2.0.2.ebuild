@@ -8,7 +8,7 @@ inherit bash-completion-r1 linux-info meson python-single-r1 vala xdg
 
 DESCRIPTION="Aims to make updating firmware on Linux automatic, safe and reliable"
 HOMEPAGE="https://fwupd.org"
-SRC_URI="https://github.com/fwupd/fwupd/tarball/a536f5b60a335cd025e7846913ba122553c12723 -> fwupd-2.0.1-a536f5b.tar.gz"
+SRC_URI="https://github.com/fwupd/fwupd/tarball/71679512a4db91a13c154f61ff9717881d77578c -> fwupd-2.0.2-7167951.tar.gz"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
@@ -114,7 +114,7 @@ src_prepare() {
 
 src_configure() {
 	local plugins=(
-		-Dplugin_gpio="true"
+		-Dplugin_gpio="enabled"
 		$(meson_use fastboot plugin_fastboot)
 		$(meson_use flashrom plugin_flashrom)
 		$(meson_use gusb plugin_uf2)
@@ -130,18 +130,18 @@ src_configure() {
 		$(meson_use uefi plugin_uefi_capsule_splash)
 		$(meson_use uefi plugin_uefi_pk)
 	)
-	use ppc64 && plugins+=( -Dplugin_msr="false" )
-	use riscv && plugins+=( -Dplugin_msr="false" )
+	use ppc64 && plugins+=( -Dplugin_msr="disabled" )
+	use riscv && plugins+=( -Dplugin_msr="disabled" )
 
 	local emesonargs=(
 		--localstatedir "${EPREFIX}"/var
 		-Dbuild="$(usex minimal standalone all)"
-		-Dconsolekit="false"
-		-Dsystemd="false"
-		-Dcurl="true"
-		-Ddocs="$(usex gtk-doc gtkdoc none)"
+		-Dconsolekit="disabled"
+		-Dsystemd="disabled"
 		-Defi_binary="false"
-		-Dsupported_build="true"
+		-Dcurl="enabled"
+		-Ddocs="$(usex gtk-doc gtkdoc disabled)"
+		-Dsupported_build="enabled"
 		$(meson_use archive libarchive)
 		$(meson_use bash-completion bash_completion)
 		$(meson_use bluetooth bluez)

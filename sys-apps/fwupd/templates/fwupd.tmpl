@@ -114,7 +114,7 @@ src_prepare() {
 
 src_configure() {
 	local plugins=(
-		-Dplugin_gpio="true"
+		-Dplugin_gpio="enabled"
 		$(meson_use fastboot plugin_fastboot)
 		$(meson_use flashrom plugin_flashrom)
 		$(meson_use gusb plugin_uf2)
@@ -130,18 +130,18 @@ src_configure() {
 		$(meson_use uefi plugin_uefi_capsule_splash)
 		$(meson_use uefi plugin_uefi_pk)
 	)
-	use ppc64 && plugins+=( -Dplugin_msr="false" )
-	use riscv && plugins+=( -Dplugin_msr="false" )
+	use ppc64 && plugins+=( -Dplugin_msr="disabled" )
+	use riscv && plugins+=( -Dplugin_msr="disabled" )
 
 	local emesonargs=(
 		--localstatedir "${EPREFIX}"/var
 		-Dbuild="$(usex minimal standalone all)"
-		-Dconsolekit="false"
-		-Dsystemd="false"
-		-Dcurl="true"
-		-Ddocs="$(usex gtk-doc gtkdoc none)"
+		-Dconsolekit="disabled"
+		-Dsystemd="disabled"
 		-Defi_binary="false"
-		-Dsupported_build="true"
+		-Dcurl="enabled"
+		-Ddocs="$(usex gtk-doc gtkdoc disabled)"
+		-Dsupported_build="enabled"
 		$(meson_use archive libarchive)
 		$(meson_use bash-completion bash_completion)
 		$(meson_use bluetooth bluez)
