@@ -13,12 +13,10 @@ SRC_URI="https://github.com/fwupd/fwupd/tarball/71679512a4db91a13c154f61ff971788
 LICENSE="LGPL-2.1+"
 SLOT="0"
 KEYWORDS="*"
-IUSE="amt archive bash-completion bluetooth +dell +elogind fastboot flashrom +gnutls gtk-doc gusb introspection logitech lzma +man minimal modemmanager nvme policykit spi +sqlite synaptics test thunderbolt tpm +uefi"
+IUSE="amt archive bash-completion bluetooth +dell +elogind fastboot flashrom +gnutls gtk-doc introspection logitech lzma +man minimal modemmanager nvme policykit spi +sqlite synaptics test thunderbolt tpm +uefi"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	^^ ( elogind minimal )
 	dell? ( uefi )
-	fastboot? ( gusb )
-	logitech? ( gusb )
 	minimal? ( !introspection )
 	spi? ( lzma )
 	synaptics? ( gnutls )
@@ -58,7 +56,6 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	elogind? ( >=sys-auth/elogind-211 )
 	flashrom? ( >=sys-apps/flashrom-1.2-r3 )
 	gnutls? ( net-libs/gnutls )
-	gusb? ( >=dev-libs/libgusb-0.3.5[introspection?] )
 	logitech? ( dev-libs/protobuf-c:= )
 	lzma? ( app-arch/xz-utils )
 	modemmanager? ( net-misc/modemmanager[qmi] )
@@ -115,43 +112,41 @@ src_prepare() {
 src_configure() {
 	local plugins=(
 		-Dplugin_gpio="enabled"
-		$(meson_use fastboot plugin_fastboot)
-		$(meson_use flashrom plugin_flashrom)
-		$(meson_use gusb plugin_uf2)
-		$(meson_use logitech plugin_logitech_bulkcontroller)
-		$(meson_use modemmanager plugin_modem_manager)
-		$(meson_use nvme plugin_nvme)
-		$(meson_use sqlite)
-		$(meson_use spi plugin_intel_spi)
-		$(meson_use synaptics plugin_synaptics_mst)
-		$(meson_use synaptics plugin_synaptics_rmi)
-		$(meson_use tpm plugin_tpm)
-		$(meson_use uefi plugin_uefi_capsule)
+		$(meson_feature fastboot plugin_fastboot)
+		$(meson_feature flashrom plugin_flashrom)
+		$(meson_feature logitech plugin_logitech_bulkcontroller)
+		$(meson_feature modemmanager plugin_modem_manager)
+		$(meson_feature nvme plugin_nvme)
+		$(meson_feature sqlite)
+		$(meson_feature synaptics plugin_synaptics_mst)
+		$(meson_feature synaptics plugin_synaptics_rmi)
+		$(meson_feature tpm plugin_tpm)
+		$(meson_feature uefi plugin_uefi_capsule)
 		$(meson_use uefi plugin_uefi_capsule_splash)
-		$(meson_use uefi plugin_uefi_pk)
+		$(meson_feature uefi plugin_uefi_pk)
 	)
-	use ppc64 && plugins+=( -Dplugin_msr="disabled" )
-	use riscv && plugins+=( -Dplugin_msr="disabled" )
+	use ppc64 && plugins+=( -Dplugin_msr="enabled" )
+	use riscv && plugins+=( -Dplugin_msr="enabled" )
 
 	local emesonargs=(
 		--localstatedir "${EPREFIX}"/var
 		-Dbuild="$(usex minimal standalone all)"
 		-Dconsolekit="disabled"
 		-Dsystemd="disabled"
-		-Defi_binary="false"
+		-Dsystemd_syscall_filter="false"
 		-Dcurl="enabled"
-		-Ddocs="$(usex gtk-doc gtkdoc disabled)"
+		-Ddocs="$(usex gtk-doc enabled disabled)"
+		-Defi_binary="false"
 		-Dsupported_build="enabled"
-		$(meson_use archive libarchive)
+		$(meson_feature lzma)
+		$(meson_feature gnutls)
+		$(meson_feature elogind)
+		$(meson_feature bluetooth bluez)
+		$(meson_feature introspection)
+		$(meson_feature policykit polkit)
+		$(meson_feature archive libarchive)
 		$(meson_use bash-completion bash_completion)
-		$(meson_use bluetooth bluez)
-		$(meson_use elogind)
-		$(meson_use gnutls)
-		$(meson_use gusb)
-		$(meson_use lzma)
 		$(meson_use man)
-		$(meson_use introspection)
-		$(meson_use policykit polkit)
 		$(meson_use test tests)
 
 		${plugins[@]}
@@ -172,3 +167,5 @@ src_install() {
 			-i "${ED}"/etc/${PN}/fwupd.conf || die
 	fi
 }
+
+# vim: filetype=ebuild
