@@ -5,7 +5,7 @@ inherit ego
 
 DESCRIPTION="Linux firmware files"
 HOMEPAGE="https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git"
-SRC_URI="https://mirrors.edge.kernel.org/pub/linux/kernel/firmware/linux-firmware-20241110.tar.gz -> linux-firmware-20241110.tar.gz
+SRC_URI="https://mirrors.edge.kernel.org/pub/linux/kernel/firmware/linux-firmware-20241210.tar.gz -> linux-firmware-20241210.tar.gz
 "
 
 LICENSE="GPL-2 GPL-2+ GPL-3 BSD MIT MPL-1.1 linux-fw-redistributable BSD-2 BSD-4 ISC no-source-code"
