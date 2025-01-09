@@ -6,7 +6,7 @@ inherit flag-o-matic linux-info toolchain-funcs udev
 
 DESCRIPTION="The spacenavd daemon provides free alternative to the 3dxserv daemon"
 HOMEPAGE="http://spacenav.sourceforge.net/"
-SRC_URI="https://api.github.com/repos/FreeSpacenav/spacenavd/tarball/v1.3 -> spacenavd-1.3.tar.gz"
+SRC_URI="https://api.github.com/repos/FreeSpacenav/spacenavd/tarball/v1.3.1 -> spacenavd-1.3.1.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
