@@ -6,7 +6,7 @@ inherit systemd toolchain-funcs
 
 DESCRIPTION="Shows and sets processor power related values"
 HOMEPAGE="https://www.kernel.org/"
-SRC_URI="https://mirrors.edge.kernel.org/pub/linux/kernel/v6.x/linux-6.13.tar.xz -> linux-6.13.tar.xz"
+SRC_URI="https://mirrors.edge.kernel.org/pub/linux/kernel/v6.x/linux-6.13.1.tar.xz -> linux-6.13.1.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0/0"
