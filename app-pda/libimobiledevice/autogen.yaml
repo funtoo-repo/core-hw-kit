@@ -3,6 +3,8 @@ libimobiledevice:
   packages:
     - libimobiledevice:
         version: 1.3.0_p20240330
+        patches:
+          - 1.3.0-cython3.patch
         github:
           user: libimobiledevice
           repo: libimobiledevice

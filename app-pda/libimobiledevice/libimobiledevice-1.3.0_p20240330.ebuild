@@ -41,6 +41,9 @@ BDEPEND="
 	doc? ( app-doc/doxygen )
 	python? ( >=dev-python/cython-0.17[${PYTHON_USEDEP}] )
 "
+PATCHES=(
+	"${FILESDIR}"/"${PN}-1.3.0-cython3.patch"
+)
 
 BUILD_DIR="${S}_build"
 

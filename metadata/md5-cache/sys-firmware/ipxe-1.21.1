@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst
+DEPEND=app-arch/xz-utils dev-lang/perl iso? ( app-cdr/cdrtools sys-boot/syslinux )
+DESCRIPTION=Open source network boot (PXE) firmware
+EAPI=7
+HOMEPAGE=https://ipxe.org/
+IUSE=efi ipv6 iso lkrn +qemu undi usb vmware savedconfig
+KEYWORDS=*
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=https://github.com/ipxe/ipxe/tarball/988d2c13cdf0f0b4140685af35ced70ac5b3283c -> ipxe-1.21.1-988d2c1.tar.gz
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	portability	2b88d3ecc35035a3b8ab628b49cafb0e	savedconfig	1de3f25f1039cd1772fbf707ef87dbe3	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=c820e4e477bbe929e6893454927038a2

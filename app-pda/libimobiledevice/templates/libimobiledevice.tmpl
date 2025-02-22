@@ -42,6 +42,14 @@ BDEPEND="
 	python? ( >=dev-python/cython-0.17[${PYTHON_USEDEP}] )
 "
 
+{%- if patches %}
+PATCHES=(
+{%- for patch in patches %}
+	"${FILESDIR}"/"${PN}-{{ patch }}"
+{%- endfor %}
+)
+{%- endif %}
+
 BUILD_DIR="${S}_build"
 
 post_src_unpack() {
