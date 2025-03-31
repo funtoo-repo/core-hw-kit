@@ -5,7 +5,7 @@ EAPI=7
 DESCRIPTION="Sound Open Firmware (SOF) binary files"
 
 HOMEPAGE="https://www.sofproject.org https://github.com/thesofproject/sof https://github.com/thesofproject/sof-bin"
-SRC_URI="https://github.com/thesofproject/sof-bin/releases/download/v2025.01/sof-bin-2025.01.tar.gz -> sof-bin-2025.01.tar.gz"
+SRC_URI="https://github.com/thesofproject/sof-bin/releases/download/v2025.01.1/sof-bin-2025.01.1.tar.gz -> sof-bin-2025.01.1.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
