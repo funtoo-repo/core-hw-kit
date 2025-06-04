@@ -6,7 +6,7 @@ inherit autotools
 
 DESCRIPTION="Support library for libimobiledevice projects"
 HOMEPAGE="https://www.libimobiledevice.org/"
-SRC_URI="https://github.com/libimobiledevice/libusbmuxd/releases/download/2.1.0/libusbmuxd-2.1.0.tar.bz2 -> libusbmuxd-2.1.0.tar.bz2"
+SRC_URI="https://github.com/libimobiledevice/libusbmuxd/releases/download/2.1.1/libusbmuxd-2.1.1.tar.bz2 -> libusbmuxd-2.1.1.tar.bz2"
 LICENSE="GPL-2+ LGPL-2.1+"
 
 SLOT="0/2.0-6" # based on SONAME of libusbmuxd-2.0.so

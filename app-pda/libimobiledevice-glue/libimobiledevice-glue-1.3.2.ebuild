@@ -6,7 +6,7 @@ inherit autotools
 
 DESCRIPTION="USB multiplex daemon for use with Apple iPhone/iPod Touch devices"
 HOMEPAGE="https://www.libimobiledevice.org/"
-SRC_URI="https://github.com/libimobiledevice/libimobiledevice-glue/releases/download/1.3.1/libimobiledevice-glue-1.3.1.tar.bz2 -> libimobiledevice-glue-1.3.1.tar.bz2"
+SRC_URI="https://github.com/libimobiledevice/libimobiledevice-glue/releases/download/1.3.2/libimobiledevice-glue-1.3.2.tar.bz2 -> libimobiledevice-glue-1.3.2.tar.bz2"
 LICENSE="GPL-2+ LGPL-2.1+"
 
 SLOT="0/0.1.0"
