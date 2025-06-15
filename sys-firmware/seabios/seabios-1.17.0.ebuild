@@ -8,7 +8,7 @@ inherit toolchain-funcs python-any-r1
 
 KEYWORDS="*"
 
-SRC_URI="https://www.seabios.org/downloads/seabios-1.16.3.tar.gz -> seabios-1.16.3.tar.gz
+SRC_URI="https://www.seabios.org/downloads/seabios-1.17.0.tar.gz -> seabios-1.17.0.tar.gz
 "
 
 DESCRIPTION="Open Source implementation of a 16-bit x86 BIOS"

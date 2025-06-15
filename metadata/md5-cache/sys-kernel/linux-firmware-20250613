@@ -9,6 +9,6 @@ LICENSE=GPL-2 GPL-2+ GPL-3 BSD MIT MPL-1.1 linux-fw-redistributable BSD-2 BSD-4 
 RDEPEND=initramfs? ( !<=app-admin/ego-2.8.5 )
 RESTRICT=strip test
 SLOT=0
-SRC_URI=https://mirrors.edge.kernel.org/pub/linux/kernel/firmware/linux-firmware-20250509.tar.gz -> linux-firmware-20250509.tar.gz
+SRC_URI=https://mirrors.edge.kernel.org/pub/linux/kernel/firmware/linux-firmware-20250613.tar.gz -> linux-firmware-20250613.tar.gz
 _eclasses_=ego	770e172d5c3e0d501d27925a01b44cbc	mount-boot	6aaf58c4a4a0f44626a2bf5483de6e7e
-_md5_=f3ce3d92929f73c7bcff9abfa3153d96
+_md5_=e1dbf6ddb46a0e57c23eecd3dc1bb46b

@@ -5,7 +5,7 @@ inherit linux-mod
 
 DESCRIPTION="Realtek RTL8821CE Driver"
 HOMEPAGE="https://github.com/tomaspinho/rtl8821ce"
-SRC_URI="https://github.com/tomaspinho/rtl8821ce/archive/6208d1dd190b7cb60bbbf760505bcb1c250518c2.tar.gz -> rtl8821ce-20250502.tar.gz"
+SRC_URI="https://github.com/tomaspinho/rtl8821ce/archive/66c015af7738039a2045b6da755875e126d3fe73.tar.gz -> rtl8821ce-20250531.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="*"
