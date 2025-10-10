@@ -7,7 +7,7 @@ inherit autotools python-r1 toolchain-funcs
 
 DESCRIPTION="Support library to deal with Apple Property Lists (Binary & XML)"
 HOMEPAGE="https://www.libimobiledevice.org/"
-SRC_URI="https://github.com/libimobiledevice/libplist/releases/download/2.4.0/libplist-2.4.0.tar.bz2 -> libplist-2.4.0.tar.bz2"
+SRC_URI="https://github.com/libimobiledevice/libplist/releases/download/2.7.0/libplist-2.7.0.tar.bz2 -> libplist-2.7.0.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0/2.0-3"
