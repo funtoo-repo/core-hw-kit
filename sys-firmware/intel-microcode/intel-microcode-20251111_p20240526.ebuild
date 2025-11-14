@@ -8,7 +8,7 @@ COLLECTION_SNAPSHOT="${PV##*_p}"
 DESCRIPTION="Intel IA32/IA64 microcode update data"
 HOMEPAGE="https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files"
 SRC_URI="https://dev.gentoo.org/~sam/distfiles/sys-firmware/intel-microcode/intel-microcode-collection-20240526.tar.xz -> intel-microcode-collection-20240526.tar.xz
-https://api.github.com/repos/intel/Intel-Linux-Processor-Microcode-Data-Files/tarball/microcode-20250812 -> microcode-20250812.tar.gz"
+https://api.github.com/repos/intel/Intel-Linux-Processor-Microcode-Data-Files/tarball/microcode-20251111 -> microcode-20251111.tar.gz"
 
 LICENSE="intel-ucode"
 SLOT="0"
